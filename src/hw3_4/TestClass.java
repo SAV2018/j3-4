@@ -1,11 +1,11 @@
 package hw3_4;
 
 public class TestClass {
-    private Object monitor = new Object();
+    private final Object monitor = new Object();
     private volatile static int currLetter = 0;
     private static char[] letters = {'A', 'B', 'C'};
 
-    void printLetter(char letter) {
+    private void printLetter(char letter) {
         synchronized (monitor) {
             try {
                 for (int i = 0; i < 5; i++) {
