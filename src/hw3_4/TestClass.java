@@ -3,10 +3,10 @@ package hw3_4;
 public class TestClass {
     private final Object monitor = new Object();
     private volatile static int currLetter = 0;
-    private static char[] letters = {'A', 'B', 'C'};
+    private static char[] letters = {'A', 'B', 'C'}; 
 
     private void printLetter(char letter) {
-        synchronized (monitor) { 
+        synchronized (monitor) {
             try {
                 for (int i = 0; i < 5; i++) {
                     while (letters[currLetter] != letter) {
